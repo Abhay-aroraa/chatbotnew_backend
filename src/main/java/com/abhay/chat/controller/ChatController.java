@@ -17,4 +17,9 @@ public class ChatController {
     public String getChatResponse(@RequestBody ChatRequest request) {
         return chatService.getReplyFromAI(request.getMessage());
     }
+
+    @GetMapping("/ping")
+    public String ping() {
+        return "Backend is alive!";
+    }
 }
